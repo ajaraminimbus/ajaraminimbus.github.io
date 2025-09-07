@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alejandro Jaramillo — Página personal</title>
+  <meta name="description" content="Sitio personal de Alejandro Jaramillo — TRÓPICO (UNAM). Climatología tropical, hidrología y meteorología." />
+  <meta property="og:title" content="Alejandro Jaramillo — Página personal" />
+  <meta property="og:description" content="TRÓPICO (UNAM). Climatología tropical, hidrología y meteorología." />
+  <meta property="og:type" content="website" />
+  <style>
+    :root {
+      --bg: #0b1020; --fg: #e8eef7; --muted: #99a4b4; --brand: #4fd1c5; --accent: #8ab4f8; --card: #121a2f;
+      --maxw: 1000px; --radius: 18px; --shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background: var(--bg); color: var(--fg); line-height: 1.6; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 0; }
+    .brand { display: flex; gap: 12px; align-items: center; }
+    .logo { width: 42px; height: 42px; border-radius: 50%; background: radial-gradient(60% 70% at 40% 30%, #1fc4b3, #1a8bf2 60%, #0b1020 100%); box-shadow: var(--shadow); }
+    .title { font-weight: 700; letter-spacing: .4px; }
+
+    .nav { display: flex; gap: 16px; flex-wrap: wrap; }
+    .chip { padding: 8px 12px; border-radius: 999px; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.08); }
+
+    .hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; align-items: center; padding: 40px 0 16px; }
+    .card { background: var(--card); border: 1px solid rgba(255,255,255,.08); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .hero .card { padding: 28px; }
+    .hero h1 { font-size: clamp(28px, 4vw, 46px); line-height: 1.15; margin: 0 0 10px; }
+    .hero p { color: var(--muted); margin: 6px 0 0; }
+
+    .badge { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; color: var(--muted); }
+    .badge .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--brand); box-shadow: 0 0 0 6px rgba(79,209,197,.12); }
+
+    .cta { display: inline-flex; gap: 12px; margin-top: 16px; }
+    .btn { display: inline-flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,.12); background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); color: var(--fg); font-weight: 600; }
+    .btn:hover { transform: translateY(-1px); transition: .2s ease; }
+
+    section { margin: 28px 0; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+    .section-title { font-size: 20px; margin: 0 0 10px; letter-spacing: .3px; }
+    .section-sub { color: var(--muted); margin: 0 0 12px; }
+
+    .item { padding: 18px; }
+    .item h3 { margin: 6px 0; font-size: 18px; }
+    .item p { margin: 8px 0 0; color: var(--muted); }
+
+    .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; padding: 2px 6px; border-radius: 6px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); }
+
+    footer { margin: 38px 0 10px; color: var(--muted); font-size: 14px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+    /* Responsive tweaks */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div class="title">Alejandro Jaramillo</div>
+          <div class="badge"><span class="dot"></span> TRÓPICO — UNAM</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a class="chip" href="#about">Sobre mí</a>
+        <a class="chip" href="#research">Investigación</a>
+        <a class="chip" href="#projects">Proyectos</a>
+        <a class="chip" href="#publications">Publicaciones</a>
+        <a class="chip" href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <h1>Climatología tropical, hidrología y meteorología aplicada</h1>
+        <p>
+          Científico en el <strong>Instituto de Ciencias de la Atmósfera y Cambio Climático (UNAM)</strong>.
+          Lidero el grupo <strong>TRÓPICO</strong> y desarrollo la librería <span class="kbd">tropy</span> para diagnósticos en regiones tropicales.
+        </p>
+        <div class="cta">
+          <a class="btn" href="#projects">Ver proyectos</a>
+          <a class="btn" href="https://github.com/ajaraminimbus" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <div class="card item">
+        <h3>Datos rápidos</h3>
+        <ul>
+          <li>Áreas: MJO, espectros Wheeler–Kiladis, ERA5, hidrología tropical</li>
+          <li>Herramientas: Python/xarray, Dask, CDO, Cartopy, NetCDF</li>
+          <li>Intereses: ondas tropicales, precipitación extrema, variabilidad intraseasonal</li>
+        </ul>
+        <p style="margin-top:10px; color: var(--muted);">Este sitio es estático y se publica con <strong>GitHub Pages</strong>.</p>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">Sobre mí</h2>
+      <p class="section-sub">Breve biografía y líneas de trabajo.</p>
+      <div class="card item">
+        <p>
+          Soy investigador en climatología tropical interesado en procesos multiescala, desde ondas ecuatoriales hasta eventos hidrometeorológicos extremos.
+          Impulso metodologías reproducibles y abiertas para el análisis de reanálisis y observaciones.
+        </p>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2 class="section-title">Líneas de investigación</h2>
+      <div class="grid">
+        <div class="card item">
+          <h3>Variabilidad intraseasonal (MJO)</h3>
+          <p>Filtros 2D tiempo–longitud, reconstrucciones y diagnóstico de fases regionales.</p>
+        </div>
+        <div class="card item">
+          <h3>Ondas tropicales</h3>
+          <p>Espectros Wheeler–Kiladis y máscaras espectrales para identificar señales dominantes.</p>
+        </div>
+        <div class="card item">
+          <h3>Extremos hidrometeorológicos</h3>
+          <p>Vínculos entre dinámica tropical y precipitación/caudales extremos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">Proyectos</h2>
+      <p class="section-sub">Algunos repositorios y herramientas públicas.</p>
+      <div class="grid">
+        <div class="card item">
+          <h3>tropy</h3>
+          <p>Paquete Python para diagnósticos tropicales (ERA5, filtros MJO, espectros). <a href="#">Ver repo</a></p>
+        </div>
+        <div class="card item">
+          <h3>Cartografía elegante</h3>
+          <p>Plantillas Cartopy/matplotlib con estilos sobrios y exportación de alta calidad.</p>
+        </div>
+        <div class="card item">
+          <h3>CDO wrappers</h3>
+          <p>Scripts reproducibles para preprocesar NetCDF (selección de variables, compresión, merge).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2 class="section-title">Publicaciones</h2>
+      <div class="card item">
+        <p>
+          Lista breve de publicaciones, DOI y enlaces (coloca tus referencias principales aquí).
+        </p>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2 class="section-title">Contacto</h2>
+      <div class="grid">
+        <div class="card item">
+          <p><strong>Email:</strong> ajaramillo@atmosfera.unam.mx</p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/ajaraminimbus" target="_blank" rel="noopener">@ajaraminimbus</a></p>
+          <p><strong>Afiliación:</strong> ICATyCC — UNAM</p>
+        </div>
+        <div class="card item">
+          <p>¿Buscas colaborar? Escríbeme con una breve descripción del problema y datos disponibles.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Alejandro Jaramillo — TRÓPICO (UNAM)</div>
+      <div><a href="#">↑ Volver arriba</a></div>
+    </footer>
+  </div>
+
+  <script>
+    // Año dinámico en el pie
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
